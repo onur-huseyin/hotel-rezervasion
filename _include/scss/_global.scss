@@ -1,0 +1,288 @@
+@use "mixin" as m;
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: #4d4d4d;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover{
+        color: #b56953;
+    }
+}
+
+ul,ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h2, h3, h4, h5, h6{
+    font-family: "Cormorant", serif;
+    color: #000;
+}
+
+p{
+    font-size: 17px;
+    word-wrap: break-word;
+}
+
+input, button{
+    outline: none !important;
+}
+
+::selection{
+    background: #b56953;
+    color: #fff
+}
+
+.o-fit{
+    object-fit: cover;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.color{
+    color: #b56953
+}
+
+.line{
+    background: rgba(189,140,126,.22);
+    height: 1px;
+    width: 100%;
+    display: block !important;
+}
+
+.raleway{
+    font-family: "Raleway" ,sans-serif;
+}
+
+.fw-500{
+    font-weight: 500;
+}
+.fw-600{
+    font-weight: 500;
+}
+
+.fs-07{
+    font-size: 0.7rem;
+}
+.fs-08{
+    font-size: 0.8rem;
+}
+.fs-09{
+    font-size: 0.9rem;
+}
+
+// check-avail buton
+.check-avail{
+    position: relative;
+    transition: all .4s;
+    outline: none !important;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #000;
+    padding: 15px 0;
+    font-size: 12px;
+    letter-spacing: .20rem;
+
+    span{
+        position: relative;
+        z-index: 3;
+        transition: .2s;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #b56953;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: all .7s;
+    }
+
+    &:hover{
+        border: 1px solid #b56953;
+
+        span{
+            color: #fff;
+        }
+
+        &:after{
+            content: "";
+            transform: translateX(0);
+        }
+    }
+}
+
+.check-avail2 {
+    position: relative;
+    transition: all .4s;
+    outline: none !important;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #b56953;
+    padding: 15px 0;
+    font-size: 12px;
+    letter-spacing: .20rem;
+
+    span {
+        position: relative;
+        z-index: 3;
+        transition: .2s;
+        color: #fff;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #b56953;
+        z-index: 2;
+        transform: translateX(0);
+        transition: all .7s;
+    }
+
+    &:hover{
+        border: 1px solid #000;
+
+        span{
+            color: #000;
+        }
+
+        &:after{
+            content: "";      
+            transform: translateX(-100%);
+        }
+    }
+}
+
+.check-avail3{
+    position: relative;
+    transition: all .4s;
+    outline: none !important;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #000;
+    padding: 15px 0;
+    font-size: 12px;
+    letter-spacing: .20rem;
+    background: #b56953;
+
+    span{
+        position: relative;
+        z-index: 3;
+        transition: .2s;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #1f191d, $alpha: 1.0);
+        // background: transparent;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: all .7s;
+    }
+
+    &:hover{
+        border: 1px solid #ffffff;
+
+        span{
+            color: #fff;
+        }
+
+        &:after{
+            content: "";
+            transform: translateX(0);
+        }
+    }
+}
+
+.check-avail4 {
+    position: relative;
+    transition: all .4s;
+    outline: none !important;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ff6000;
+    padding: 15px 0;
+    font-size: 12px;
+    letter-spacing: .20rem;
+
+    span {
+        position: relative;
+        z-index: 3;
+        transition: .2s;
+        color: #fff;
+    }
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff6000;
+        z-index: 2;
+        transform: translateX(0);
+        transition: all .7s;
+    }
+
+    &:hover{
+        border: 1px solid #000;
+
+        span{
+            color: #000;
+        }
+
+        &:after{
+            content: "";      
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+//newsletter-wrap
+.newsletter-wrap{
+    background: #f6f3ea;
+    padding: 50px 0;
+
+    @include m.responsive(992){
+        padding: 105px 0;
+    }
+}
+
+
+.bi-check2 {
+    padding-right: 4px;
+}
+
+.room-hero-swiper {
+    .swiper-slide {
+        img {
+            cursor: zoom-in!important;
+        }
+    
+    }
+}

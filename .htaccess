@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(_include|_api)($|/) - [L]
+RewriteRule ^(.*[^\/]) index.php?mainroute=$1 [L,NC,QSA]
+</IfModule>

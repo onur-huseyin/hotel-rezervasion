@@ -1,0 +1,122 @@
+@use "mixin" as m;
+.room{
+
+    &-hero{
+        margin-bottom: 30px;
+
+        @include m.responsive(768){
+            margin-bottom: 100px;
+        }
+    
+        &-swiper{
+            height: 400px;
+            
+            @include m.responsive(768){
+                height: 527px;
+            }
+        }    
+        
+        .swiper{
+            
+            &-slide{
+                padding: 0px 5px;
+                width: 275px;
+                
+                @include m.responsive(1200){
+                    width: 475px;
+                }
+            }
+            
+            &-slide img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        
+    }
+
+    &-article{
+
+        .content{
+            padding: 0 10px;
+
+            @include m.responsive(768px){
+                padding-left: 0px;
+                padding-right: 50px;
+            }
+        }
+    }
+    
+    &-form{
+        background: #faf9f5;
+        padding: 40px 45px;
+    
+        .extra-service{
+            margin-bottom: 15px;
+            
+            input{
+                display: none;
+            }
+    
+            .checkbox{
+                width: 20px;
+                height: 20px;
+                margin-bottom: 5px;
+                line-height: 19px;
+                text-align: center;
+                transition: all .2s;
+    
+                svg{
+                    opacity: 0;
+                    transition: all .2s;
+                }
+            }
+    
+            input:checked ~ span{
+                background: #b56953;
+    
+                svg{
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-weather{
+        background: #faf9f5;
+        padding: 40px 45px;
+    }
+
+    &-features{
+        a{
+            font-size: 12px;
+        }
+    }
+}
+
+.reserva{
+
+    label{
+        margin-bottom: 5px;
+        font-family: "Raleway", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        line-height: 1.6em;
+        color: #000
+    }
+
+    input, select{
+        margin-bottom:  30px;
+        padding: 9.5px 16px;
+        font-size: 17px;
+        line-height: 29px;
+        font-weight: 300;
+        color: #4d4d4d;
+    }
+}
+

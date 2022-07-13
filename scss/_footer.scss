@@ -1,0 +1,52 @@
+@use "mixin" as m;
+
+.footer{
+    padding:50px 10px;
+    background: #faf9f5;
+
+    @include m.responsive(1200){
+        padding:150px 60px;
+    }
+
+    h4{
+        margin-bottom: 20px;
+    }
+
+    .col-3{
+        max-width: 330px;
+    }
+
+    &-pay{
+
+        a{margin-right: 10px;}
+        
+        i{
+            font-size: 40px;
+            color: #c5c0b1;
+            transition: all .7;
+    
+            &:hover{
+                color: #b56953;
+            }
+        }
+    }
+
+    &-social{
+
+        a{margin-right: 10px;}
+        
+        i{
+            font-size: 20px;
+            transition: all .7;
+    
+            &:hover{
+                color: #b56953;
+            }
+        }
+    }
+}
+
+.footer-bottom{
+    background: #f3ece8;
+    text-align: center;
+}
